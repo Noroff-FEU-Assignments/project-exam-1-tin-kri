@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    margin: 0;
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+
+
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    flex-grow: 1;
+
+
+}
+
+nav a {
+    padding: 1rem 4rem;
+    display: block;
+    border: 1px solid #010101;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+.logo {
+    flex-grow: 0;
+
+}
+
+span {
+    flex-grow: 10;
+    border-top: solid 1px #010101;
+    border-bottom: solid 1px #010101;
+
+}
