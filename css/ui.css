@@ -1,0 +1,28 @@
+body {}
+
+.container-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.blog-post {
+    height: 400px;
+    width: 300px;
+    padding: 1rem;
+    border: 1px solid #010101;
+    border-bottom: 5px solid #010101;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px #010101
+}
+
+.divider {
+    border-right: solid 1px #010101;
+}
