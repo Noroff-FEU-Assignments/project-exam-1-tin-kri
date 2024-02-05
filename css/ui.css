@@ -81,3 +81,5 @@ a:active {
     background: var(--secondary-color);
     color: var(--lighter-secondary-color);
 }
+
+.img-about {}

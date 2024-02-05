@@ -9,12 +9,12 @@
     --primary-light-font-color: #EBEBF2;
 
 
-    /* font families */
+    /* || font families */
     --font-family-base: "Roboto Mono", monospace;
     --font-family-accent: "EB Garamond", serif;
 
 
-    /* font sizes */
+    /* || font sizes */
     --fs-base-heading: 2rem;
     --fs-base-subheading: 1.688rem;
     --fs-base-paragraph: 1;
@@ -23,14 +23,14 @@
     --fs-accent-subheading: 1.875rem;
     --fs-accent-paragraph: 1.125rem;
 
-    /* font weight */
+    /* || font weight */
     --fw-base-regular: 400;
     --fw-base-bold: 800;
     --fw-accent-regular: 400;
     --fw-accent-bold: 700;
 
 
-    /* font style */
+    /* || font style */
     --fs-normal: normal;
     --fs-cursive: italic;
 }
@@ -56,10 +56,8 @@ h3 {
     font-size: var(--fs-base-paragraph);
 }
 
+.date-stamp {
+    font-family: var(--font-family-accent);
+    font-style: var(--fs-cursive);
 
-
-
-
-/*
-
-/* || Typography */
+}
