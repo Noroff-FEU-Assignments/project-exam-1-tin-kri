@@ -1,31 +1,65 @@
-/* || General styles */
+:root {
+    --background-color: #EBEBF2;
+    --primary-color: #6A6DA6;
+    --darker-primary-color: #414267;
+    --lighter-primary-color: #A0A2CB;
+    --secondary-color: #F25C5C;
+    --lighter-secondary-color: #F2BBB6;
+    --primary-dark-font-color: #525481;
+    --primary-light-font-color: #EBEBF2;
+
+
+    /* font families */
+    --font-family-base: "Roboto Mono", monospace;
+    --font-family-accent: "EB Garamond", serif;
+
+
+    /* font sizes */
+    --fs-base-heading: 2rem;
+    --fs-base-subheading: 1.688rem;
+    --fs-base-paragraph: 1;
+
+    --fs-accent-heading: 2.188rem;
+    --fs-accent-subheading: 1.875rem;
+    --fs-accent-paragraph: 1.125rem;
+
+    /* font weight */
+    --fw-base-regular: 400;
+    --fw-base-bold: 800;
+    --fw-accent-regular: 400;
+    --fw-accent-bold: 700;
+
+
+    /* font style */
+    --fs-normal: normal;
+    --fs-cursive: italic;
+}
 
 body {
-    background-color: #EBEBF2;
+    background-color: var(--background-color);
+    font-family: var(--font-family-base)
 }
+
+h1 {
+    font-family: var(--font-family-accent);
+}
+
+h2 {
+    font-family: var(--font-family-accent);
+}
+
+h3 {
+    font-family: var(--font-family-accent);
+}
+
+.about-paragraph {
+    font-size: var(--fs-base-paragraph);
+}
+
+
+
+
 
 /*
 
 /* || Typography */
-
-
-
-/* <uniquifier>: Use a uniquifier for the class name
-/* <weight>: Use a value from 400 to 800 */
-
-/*eb-garamond-<uniquifier> */
-font-family: "EB Garamond",
-serif;
-font-optical-sizing: auto;
-font-weight: <weight>;
-font-style: normal;
-
-/* <uniquifier>: Use a uniquifier for the class name
-  /* <weight>: Use a value from 100 to 700
-  
-  .roboto-mono-<uniquifier> */
-font-family: "Roboto Mono",
-monospace;
-font-optical-sizing: auto;
-font-weight: <weight>;
-font-style: normal;

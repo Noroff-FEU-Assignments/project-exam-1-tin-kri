@@ -1,5 +1,3 @@
-body {}
-
 .container-posts {
     display: grid;
     grid-template-columns: repeat(auto-fit, 20rem);
@@ -25,4 +23,61 @@ body {}
 
 .divider {
     border-right: solid 1px #010101;
+}
+
+.button {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-base-paragraph);
+    background-color: var(--darker-primary-color);
+    color: var(--primary-light-font-color);
+}
+
+/* .button:link {
+    color: var(--secondary-color);
+}
+
+.button:visited {
+    color: var(--secondary-color);
+}
+
+.button:focus {
+    text-decoration: none;
+    background: var(--lighter-secondary-color);
+}
+
+.button:hover {
+    text-decoration: none;
+    background: var(--lighter-secondary-color);
+}
+
+.button:active {
+    background: var(--secondary-color);
+    color: var(--lighter-secondary-color);
+} */
+
+
+
+
+
+a:link {
+    color: var(--secondary-color);
+}
+
+a:visited {
+    color: var(--secondary-color);
+}
+
+a:focus {
+    text-decoration: none;
+    background: var(--lighter-secondary-color);
+}
+
+a:hover {
+    text-decoration: none;
+    background: var(--lighter-secondary-color);
+}
+
+a:active {
+    background: var(--secondary-color);
+    color: var(--lighter-secondary-color);
 }
