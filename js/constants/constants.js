@@ -1,0 +1,1 @@
+export const API_URL = 'http://lenore-poe.local/wp-json/wp/v2/posts';
