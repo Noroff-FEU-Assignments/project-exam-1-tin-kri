@@ -1,38 +1,45 @@
 import { API_URL } from "../constants/constants.js";
 
-
-
-//displays data //
-function displayPosts(posts) {
-    for (let i = 0; i < posts.length; i++) {
-        const title = posts[i].title;
-        const excerpt = posts[i].excerpt;
-        console.log('Title', title, 'Excerpt', excerpt);
-    }
-}
-
-
-
-//used to fetch any API / data //
-async function doFetch(url) {
+// Used to fetch any API / data
+async function getPosts(url) {
     try {
         const response = await fetch(url);
         const json = await response.json();
+
+        console.log(json);
         return json;
+
     } catch (error) {
-        console.log('Error fetching', error);
+        console.log('Error fetching API', error);
     }
 }
 
+function renderPost(post) {
+    const section = document.querySelector('.blog-posts');
+    const postDiv = document.createElement('div');
 
-//main function henter data med doFetch//
-//og med displayPosts så viser den dataen//
-async function main() {
-    const posts = await doFetch(API_URL);
-    displayPosts(posts);
+    const postTitle = document.createElement('h2');
+    postTitle.innerText = post.title;
+    postTitle.classList.add('blog-title');
+
+    const postPublished = document.createElement('h3');
+    postPublished.innerText = post.date_gmt;
+    postPublished.classList.add('date-published');
+
+    const postBody = document.createElement('p');
+    postBody.innerText = post.excerpt;
+
+    postDiv.appendChild(postTitle);
+    postDiv.appendChild(postBody);
+    postDiv.appendChild(postPublished);
+
+    section.appendChild(postDiv); // Append the post div to the section
 }
 
-main();
+async function renderPosts(url) {
+    const posts = await getPosts(url);
+    posts.forEach(post => renderPost(post)); // Call renderPost for each post
+}
 
-
-
+// Call renderPosts with the API URL
+renderPosts(API_URL);
