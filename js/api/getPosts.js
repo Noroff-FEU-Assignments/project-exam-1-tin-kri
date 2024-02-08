@@ -1,5 +1,12 @@
 import { API_URL } from "../constants/constants.js";
 
+
+
+//TO DO
+// 1. categories - how to fetch them and render more than just the number?
+
+
+
 // Used to fetch any API / data
 async function getPosts(url) {
     try {
@@ -15,23 +22,42 @@ async function getPosts(url) {
 }
 
 function renderPost(post) {
-    const section = document.querySelector('.blog-posts');
+    const section = document.querySelector('.container-posts');
     const postDiv = document.createElement('div');
+    postDiv.classList.add('blog-posts');
 
     const postTitle = document.createElement('h2');
-    postTitle.innerText = post.title;
+    postTitle.innerText = post.title.rendered;
     postTitle.classList.add('blog-title');
 
-    const postPublished = document.createElement('h3');
-    postPublished.innerText = post.date_gmt;
-    postPublished.classList.add('date-published');
 
     const postBody = document.createElement('p');
-    postBody.innerText = post.excerpt;
+    const truncatedBody = post.content.rendered.substring(0, 190);
+    postBody.innerHTML = truncatedBody + '...';
+
+    const postReadmore = document.createElement('a')
+    postReadmore.innerText = 'Read more';
+    postReadmore.classList.add('link');
+
+
+    const postCategory = document.createElement('h3');
+    postCategory.innerText = post.categories.array;
+    postCategory.classList.add('category');
+
+    const postPublished = document.createElement('h3');
+    const truncatedDate = post.date_gmt.substring(0, 10)
+    postPublished.innerText = truncatedDate;
+    postPublished.classList.add('date-published');
+
+
 
     postDiv.appendChild(postTitle);
     postDiv.appendChild(postBody);
+    postDiv.appendChild(postReadmore);
     postDiv.appendChild(postPublished);
+
+
+
 
     section.appendChild(postDiv); // Append the post div to the section
 }

@@ -1,28 +1,26 @@
 .container-posts {
     display: grid;
     grid-template-columns: repeat(auto-fit, 20rem);
-    grid-gap: 20px;
+    grid-gap: 5rem;
     justify-content: center;
+    margin-top: 5rem;
 }
 
-.blog-post {
+.blog-posts {
+    background-color: var(--background-color-card);
     height: 400px;
     width: 300px;
     padding: 1rem;
-    border: 1px solid #010101;
+    border: 2px solid #010101;
     border-bottom: 5px solid #010101;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--bs-default);
 }
 
-.flex {
+
+.button-container {
+    margin-top: 5rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: solid 1px #010101
-}
-
-.divider {
-    border-right: solid 1px #010101;
+    justify-content: center;
 }
 
 .button {
@@ -30,54 +28,67 @@
     font-size: var(--fs-base-paragraph);
     background-color: var(--darker-primary-color);
     color: var(--primary-light-font-color);
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    border: 2px solid black;
+    border-bottom: 2.5px solid #010101;
+    box-shadow: var(--bs-default);
+
+
+
+
 }
 
-/* .button:link {
-    color: var(--secondary-color);
+.button:link {
+    color: var(--primary-light-font-color);
 }
 
 .button:visited {
-    color: var(--secondary-color);
+    color: var(--primary-light-font-color);
 }
 
 .button:focus {
-    text-decoration: none;
-    background: var(--lighter-secondary-color);
+    background: var(--primary-color);
 }
 
 .button:hover {
-    text-decoration: none;
-    background: var(--lighter-secondary-color);
+    background: var(--lighter-primary-color);
 }
 
 .button:active {
-    background: var(--secondary-color);
-    color: var(--lighter-secondary-color);
-} */
+    background: var(--darker-primary-color);
+    color: var(--primary-light-font-color);
+}
 
 
 
 
+.link {
+    color: var(--secondary-color);
+    font-weight: var(--fw-base-bold);
+    text-decoration: underline;
 
-a:link {
+}
+
+.link:link {
     color: var(--secondary-color);
 }
 
-a:visited {
+.link:visited {
     color: var(--secondary-color);
 }
 
-a:focus {
+.link:focus {
     text-decoration: none;
     background: var(--lighter-secondary-color);
 }
 
-a:hover {
+.link:hover {
     text-decoration: none;
     background: var(--lighter-secondary-color);
 }
 
-a:active {
+.link:active {
     background: var(--secondary-color);
     color: var(--lighter-secondary-color);
 }

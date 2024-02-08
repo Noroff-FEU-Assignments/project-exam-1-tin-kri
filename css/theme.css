@@ -1,11 +1,20 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 :root {
     --background-color: #EBEBF2;
+    --background-color-card: #DADAE7;
     --primary-color: #6A6DA6;
     --darker-primary-color: #414267;
     --lighter-primary-color: #A0A2CB;
     --secondary-color: #F25C5C;
     --lighter-secondary-color: #F2BBB6;
-    --primary-dark-font-color: #525481;
+    --pirmary-dark-font-color: #414267;
+    --primary-mid-font-color: #525481;
     --primary-light-font-color: #EBEBF2;
 
 
@@ -27,37 +36,65 @@
     --fw-base-regular: 400;
     --fw-base-bold: 800;
     --fw-accent-regular: 400;
+    --fw-accent-light: 200;
     --fw-accent-bold: 700;
 
 
     /* || font style */
     --fs-normal: normal;
     --fs-cursive: italic;
+
+
+    /* || box-shadow ikke helt sikker på denne ennå*/
+    --bs-default:
+        5px 3.4px 3.4px rgba(0, 0, 0, 0.019),
+        11.2px 7.7px 8.6px rgba(0, 0, 0, 0.027),
+        20.5px 14px 17.5px rgba(0, 0, 0, 0.033),
+        38.1px 26px 36.1px rgba(0, 0, 0, 0.041),
+        95px 65px 99px rgba(0, 0, 0, 0.06);
+
+
+    /* 6px 6px 10px 3px rgba(0, 0, 0, 0.10); */
 }
 
 body {
     background-color: var(--background-color);
-    font-family: var(--font-family-base)
+    font-family: var(--font-family-base);
+    color: var(--primary-dark-font-color);
+
 }
 
 h1 {
     font-family: var(--font-family-accent);
+    font-weight: var(--fw-accent-light);
+
+
 }
 
 h2 {
     font-family: var(--font-family-accent);
+    font-weight: var(--fw-accent-light);
+
 }
 
 h3 {
     font-family: var(--font-family-accent);
 }
 
+
+
 .about-paragraph {
+    font-size: var(--fs-base-paragraph);
+
+}
+
+.date-published {
+    font-family: var(--font-family-base);
+    font-weight: var(--fw-base-regular);
+    font-style: var(--fs-cursive);
     font-size: var(--fs-base-paragraph);
 }
 
-.date-stamp {
-    font-family: var(--font-family-accent);
-    font-style: var(--fs-cursive);
-
+.heading {
+    text-align: center;
 }
