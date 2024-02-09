@@ -1,12 +1,5 @@
 import { API_URL } from "../constants/constants.js";
 
-
-
-//TO DO
-// 1. categories - how to fetch them and render more than just the number?
-
-
-
 // Used to fetch any API / data
 async function getPosts(url) {
     try {
@@ -20,6 +13,7 @@ async function getPosts(url) {
         console.log('Error fetching API', error);
     }
 }
+
 
 function renderPost(post) {
     const section = document.querySelector('.container-posts');
@@ -50,16 +44,13 @@ function renderPost(post) {
     postPublished.classList.add('date-published');
 
 
-
     postDiv.appendChild(postTitle);
     postDiv.appendChild(postBody);
     postDiv.appendChild(postReadmore);
     postDiv.appendChild(postPublished);
 
 
-
-
-    section.appendChild(postDiv); // Append the post div to the section
+    section.appendChild(postDiv); // Appends the post div to the section
 }
 
 async function renderPosts(url) {

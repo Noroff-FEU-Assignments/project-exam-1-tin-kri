@@ -6,40 +6,96 @@ body {
 nav ul {
     margin: 0;
     list-style: none;
-    font-size: 1.5rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto;
+    justify-items: stretch;
+    font-size: var(--fs-base-paragraph);
+
+}
 
 
+
+.brand {
+    border: 1px solid black;
+}
+
+.nav-link {
+    border: 1px solid #010101;
+    text-align: center;
+    width: 150px;
 }
 
 ul {
     padding-left: 0;
-}
 
-li {
-    flex-grow: 1;
 
 
 }
 
 nav a {
-    padding: 1rem 4rem;
+    padding: 0.5rem;
     display: block;
-    border: 1px solid #010101;
     text-decoration: none;
-    text-align: center;
-}
-
-
-
-.logo {
-    flex-grow: 0;
+    height: 2.5rem;
 
 }
 
-span {
-    flex-grow: 10;
-    border-top: solid 1px #010101;
-    border-bottom: solid 1px #010101;
 
+
+
+
+
+
+/* Add styles for mobile navigation */
+@media screen and (max-width: 999px) {
+    nav ul {
+        display: none;
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+}
+
+
+/* Add styles for mobile navigation */
+@media screen and (max-width: 999px) {
+    nav ul {
+        display: none;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: block;
+
+    }
+
+    #menu-toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+    }
+
+    .brand {
+        display: block;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        /* Make each list item take up full width */
+    }
+}
+
+/* Additional styles for desktop navigation */
+@media screen and (min-width: 1000px) {
+    #menu-toggle {
+        display: none;
+    }
 }
