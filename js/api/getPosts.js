@@ -32,6 +32,7 @@ function renderPost(post) {
     const postReadmore = document.createElement('a')
     postReadmore.innerText = 'Read more';
     postReadmore.classList.add('link');
+    postReadmore.href = `post.html?id=${post.id}`;
 
 
     const postCategory = document.createElement('h3');

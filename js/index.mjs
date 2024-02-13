@@ -1,3 +1,7 @@
-import { main } from "./api/getPosts.js";
 
-main();
+import { hamburgerMenu } from "./constants/header.js";
+
+
+hamburgerMenu();
+
+
