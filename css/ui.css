@@ -181,3 +181,13 @@ input {
 .about-title {
     margin: 1rem 8rem;
 }
+
+@media screen and (max-width: 999px) {
+    .about-container p {
+        margin: auto;
+    }
+
+    .about-title {
+        margin: auto;
+    }
+}
