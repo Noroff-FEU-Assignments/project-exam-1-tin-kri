@@ -133,9 +133,9 @@ async function renderPosts(url, numberToDisplay) {
     posts.slice(0, numberToDisplay).forEach(post => renderPost(post));
 }
 
-// Function to handle "Show more" button click event
+//"Show more" button click event
 function handleShowMore() {
-    numberDisplayedPosts += 3; // Increase the number of displayed posts by 3
+    numberDisplayedPosts += 3; // Add 3 posts
     renderPosts(API_URL, numberDisplayedPosts);
 
     // Hide the "Show more" button if all posts are displayed
@@ -149,5 +149,5 @@ function handleShowMore() {
 const showMoreButton = document.querySelector('.button');
 showMoreButton.addEventListener('click', handleShowMore);
 
-// Call renderPosts with the API URL and initial number of posts to display
+
 renderPosts(API_URL, numberDisplayedPosts);

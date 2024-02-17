@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <script type="module" src="../js/index.mjs"></script>
+
     <title>Document</title>
 </head>
 <header>
@@ -38,14 +39,35 @@
 
         <p>Reach out and connect. Share your thoughts, questions, or just say hello. I look forward to hearing from you!
         </p>
-        <!-- Contact form 
-        1 name 
-        2 email
-        3 subject
-        4 message
-        5 send button  -->
 
-        <script src="/js/index.js" defer="defer"></script>
+
+        <div id="error"> </div>
+
+        <form id="form">
+            <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" required>
+            </div>
+
+            <div>
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" required>
+            </div>
+
+            <div>
+                <label for="message">Message</label>
+                <input id="message" name="message" type="text" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+
 </body>
 
 </html>
