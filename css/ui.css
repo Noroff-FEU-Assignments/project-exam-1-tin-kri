@@ -33,10 +33,6 @@
     border: 2px solid black;
     border-bottom: 2.5px solid #010101;
     box-shadow: var(--bs-default);
-
-
-
-
 }
 
 .button:link {
@@ -94,3 +90,67 @@
 }
 
 .img-about {}
+
+
+.contact-container .contact-title,
+.contact-text {
+
+    margin: 2rem;
+    padding: 1rem 3rem 2rem;
+}
+
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.6fr));
+    background-color: var(--background-color-card);
+    gap: 5px;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+.contact-error {
+    grid-row: 5;
+    color: var(--secondary-color);
+}
+
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 3rem;
+    margin-bottom: 1rem;
+
+    border: solid var(--primary-color) 0.2px;
+    border-bottom: solid var(--darker-primary-color) 3px;
+}
+
+#message {
+    height: 10rem;
+    resize: vertical;
+}
+
+.contact-button {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-base-paragraph);
+    background-color: var(--darker-primary-color);
+    color: var(--primary-light-font-color);
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    margin-top: 15px;
+    border: 2px solid black;
+    border-bottom: 2.5px solid #010101;
+    box-shadow: var(--bs-default);
+    width: 100%;
+}
+
+.contact-button:hover {
+    background: var(--lighter-primary-color);
+}
+
+.contact-button:active {
+    background: var(--darker-primary-color);
+    color: var(--primary-light-font-color);
+}

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/theme.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,6 +17,7 @@
 
     <title>Document</title>
 </head>
+
 <header>
 
     <nav id="navbar">
@@ -34,39 +36,48 @@
 </header>
 
 <body>
+    <div class="contact-container">
+        <h1 class="contact-title">Contact me</h1>
 
-    <h1>Contact me</h3>
 
-        <p>Reach out and connect. Share your thoughts, questions, or just say hello. I look forward to hearing from you!
+        <p class="contact-text">Hello, As you prepare to share your thoughts or inquiries with me, I wanted to extend a
+            warm
+            invitation for collaboration and connection. If you're a fellow storyteller with a tale to tell, I'd love to
+            hear from you! Whether you're seeking to share your story as a guest contributor, offer feedback on my
+            writing, recommend a captivating book, or engage in discussions about storytelling, your input is invaluable
+            to me.
         </p>
 
+        <p class="contact-text"> Looking forward to connecting and discovering the magic of storytelling with you.</p>
 
-        <div id="error"> </div>
+        <div class="form-container">
+            <div class="contact-error" id="error"> </div>
 
-        <form id="form">
-            <div>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required>
-            </div>
+            <form class="contact-form" id="form">
+                <div class="contact-name">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
 
-            <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="text" required>
-            </div>
+                <div class="contact-email">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="text" required>
+                </div>
 
-            <div>
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" required>
-            </div>
+                <div class="contact-subject">
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" type="text" required>
+                </div>
 
-            <div>
-                <label for="message">Message</label>
-                <input id="message" name="message" type="text" required>
-            </div>
+                <div class="contact-message">
+                    <label for="message">Message</label>
+                    <input id="message" name="message" type="text" required>
+                </div>
 
-            <button type="submit">Submit</button>
-        </form>
-
+                <button class="contact-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 
