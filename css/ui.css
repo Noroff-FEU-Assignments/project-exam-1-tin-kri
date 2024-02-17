@@ -89,7 +89,7 @@
     color: var(--lighter-secondary-color);
 }
 
-.img-about {}
+/* Contact page */
 
 
 .contact-container .contact-title,
@@ -153,4 +153,32 @@ input {
 .contact-button:active {
     background: var(--darker-primary-color);
     color: var(--primary-light-font-color);
+}
+
+/* About page */
+
+.about-container {
+    display: grid;
+
+    grid-template-areas:
+        "title"
+        "img"
+        "paragraph1"
+        "paragraph3"
+        "paragraph4"
+    ;
+
+    grid-gap: 5px;
+    margin: 2rem;
+
+}
+
+
+.img-about {
+    grid-area: img;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 0.2px solid var(--primary-color);
+    border-bottom: 3px solid var(--darker-primary-color);
 }
