@@ -1,0 +1,298 @@
+.container-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-gap: 5rem;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.blog-posts {
+    background-color: var(--background-color-card);
+    height: 400px;
+    width: 300px;
+    padding: 1rem;
+    border: 2px solid #010101;
+    border-bottom: 5px solid #010101;
+    box-shadow: var(--bs-default);
+}
+
+
+.button-container {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-base-paragraph);
+    background-color: var(--darker-primary-color);
+    color: var(--primary-light-font-color);
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    border: 2px solid black;
+    border-bottom: 2.5px solid #010101;
+    box-shadow: var(--bs-default);
+}
+
+.button:link {
+    color: var(--primary-light-font-color);
+}
+
+.button:visited {
+    color: var(--primary-light-font-color);
+}
+
+.button:focus {
+    background: var(--primary-color);
+}
+
+.button:hover {
+    background: var(--lighter-primary-color);
+}
+
+.button:active {
+    background: var(--darker-primary-color);
+    color: var(--primary-light-font-color);
+}
+
+
+
+
+.link {
+    color: var(--secondary-color);
+    font-weight: var(--fw-base-bold);
+    text-decoration: underline;
+
+}
+
+.link:link {
+    color: var(--secondary-color);
+}
+
+.link:visited {
+    color: var(--secondary-color);
+}
+
+.link:focus {
+    text-decoration: none;
+    background: var(--lighter-secondary-color);
+}
+
+.link:hover {
+    text-decoration: none;
+    background: var(--lighter-secondary-color);
+}
+
+.link:active {
+    background: var(--secondary-color);
+    color: var(--lighter-secondary-color);
+}
+
+/* Contact page */
+
+
+.contact-container .contact-title,
+.contact-text {
+
+    margin: 2rem;
+    padding: 1rem 3rem 2rem;
+}
+
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.6fr));
+    background-color: var(--background-color-card);
+    gap: 5px;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+.contact-error {
+    grid-row: 5;
+    color: var(--secondary-color);
+}
+
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 3rem;
+    margin-bottom: 1rem;
+
+    border: solid var(--primary-color) 0.2px;
+    border-bottom: solid var(--darker-primary-color) 3px;
+}
+
+#message {
+    height: 10rem;
+    resize: vertical;
+}
+
+.contact-button {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-base-paragraph);
+    background-color: var(--darker-primary-color);
+    color: var(--primary-light-font-color);
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    margin-top: 15px;
+    border: 2px solid black;
+    border-bottom: 2.5px solid #010101;
+    box-shadow: var(--bs-default);
+    width: 100%;
+}
+
+.contact-button:hover {
+    background: var(--lighter-primary-color);
+}
+
+.contact-button:active {
+    background: var(--darker-primary-color);
+    color: var(--primary-light-font-color);
+}
+
+/* About page */
+
+.about-container {
+    margin: 2rem;
+}
+
+
+
+.img-about {
+
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 0.2px solid var(--primary-color);
+    border-bottom: 3px solid var(--darker-primary-color);
+}
+
+.about-container p {
+    margin: 1rem 8rem;
+}
+
+.about-title {
+    margin: 1rem 8rem;
+}
+
+@media screen and (max-width: 999px) {
+    .about-container p {
+        margin: auto;
+    }
+
+    .about-title {
+        margin: auto;
+    }
+}
+
+
+
+
+/*Index*/
+
+.landing-heading {
+    text-align: center;
+    padding: 4rem;
+}
+
+.latest-posts {
+    font-family: var(--font-family-base);
+    font-weight: var(--fw-base-bold);
+    color: var(--primary-dark-font-color);
+    text-align: center;
+    padding: 4rem;
+
+}
+
+
+/* Slideshow container */
+.slideshowContainer {
+    max-width: 450px;
+    position: relative;
+    margin: auto;
+}
+
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+
+    width: auto;
+    padding: 16px;
+    color: var(--primary-light-font-color);
+    transition: 0.5s linear;
+}
+
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+
+.prev:hover,
+.next:hover {
+    background-color: var(--darker-primary-color)
+}
+
+/* rendered text */
+.text {
+    background-color: var(--background-color-card);
+    color: #000000;
+    padding: 10px;
+
+    width: 100%;
+    border-bottom: solid var(--darker-primary-color) 2px;
+
+}
+
+text p:not(:last-child) {
+    text-decoration: underline;
+}
+
+.text a:last-child {
+    text-decoration: none;
+}
+
+.text span {
+    padding: 1rem;
+    background-color: var(--background-color-card);
+}
+
+
+/* Fading animation */
+.slide {
+    animation-name: slide;
+    animation-duration: 1.5s;
+}
+
+.blogImage {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.spacer {
+
+    padding-bottom: 2rem;
+}
+
+.container-socialmedia {
+
+    padding: 4rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
