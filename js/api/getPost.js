@@ -3,7 +3,7 @@
 // Fetch the post data based on the post ID
 async function fetchPost(postId) {
     try {
-        const postResponse = await fetch(`http://lenore-poe.local/wp-json/wp/v2/posts/${postId}`);
+        const postResponse = await fetch(`https://www.tinakristiansen.no/wp-json/wp/v2/posts/${postId}`);
         return await postResponse.json();
     } catch (error) {
         console.log('Error fetching post:', error);
@@ -17,7 +17,7 @@ async function fetchFeaturedImageUrl(postId) {
         const postData = await fetchPost(postId);
 
         if (postData.featured_media) {
-            const mediaResponse = await fetch(`http://lenore-poe.local/wp-json/wp/v2/media/${postData.featured_media}`);
+            const mediaResponse = await fetch(`https://www.tinakristiansen.no/wp-json/wp/v2/media/${postData.featured_media}`);
             const mediaData = await mediaResponse.json();
             return mediaData.source_url;
         }

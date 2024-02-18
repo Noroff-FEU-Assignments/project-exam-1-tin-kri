@@ -1,1 +1,1 @@
-export const API_URL = 'http://lenore-poe.local/wp-json/wp/v2/posts/?per_page=100';
+export const API_URL = 'https://www.tinakristiansen.no/wp-json/wp/v2/posts/?per_page=100';  

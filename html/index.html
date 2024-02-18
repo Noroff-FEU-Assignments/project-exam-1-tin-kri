@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/theme.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <script type="module" src="../js/index.mjs"></script>
+    <script src="../js/carousel.js" defer> </script>
     <title>Document</title>
 </head>
 <header>
@@ -38,32 +40,32 @@
         alt="Dithered photograph of a man looking back in a busy London street">
     <h1>Latest Posts</h3>
 
-        <p class="date-stamp">22.22.2022 </p>
-        <!-- ex 1 Card carousel goes here -->
 
-        <div class="carousel">
-            <div class="nav-left"></div>
-            <ul class="carousel-track">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class="nav-right"></div>
-        </div>
 
 
         <!-- ex 2 Card carousel goes here from kevin powell https://www.youtube.com/watch?v=VYsVOamdB0g youtube -->
 
-        <div class="carousel">
-            <button class="carousel__button"></button>
+        <div class="carousel-container">
+            <button class="carousel__button__left">
+                <img src="../images/reshot-icon-left-arrow-VCGUT7EKR3.svg" alt="arrow pointing left">
+            </button>
             <div class="carousel__track-container">
                 <ul class="carousel__track">
-                    <li class="carousel__slide"></li>
-                    <li class="carousel__slide"></li>
-                    <li class="carousel__slide"></li>
+                    <li class="carousel__slide">
+                        <img src="" alt="">
+                        <p class="date-stamp">22.22.2022 </p>
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="" alt="">
+                    </li>
                 </ul>
             </div>
-            <button class="carousel__button"></button>
+            <button class="carousel__button__right">
+                <img src="../images/reshot-icon-right-arrow-UCA8NGYZDJ.svg" alt="arrow pointing right">
+            </button>
         </div>
 
 

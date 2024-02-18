@@ -158,10 +158,8 @@ input {
 /* About page */
 
 .about-container {
-
     margin: 2rem;
 }
-
 
 
 
@@ -190,4 +188,43 @@ input {
     .about-title {
         margin: auto;
     }
+}
+
+
+/* carousel */
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel__slide {
+    flex: 0 0 33.33%;
+    /* Display three slides at a time */
+}
+
+.carousel__button__left,
+.carousel__button__right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel__button__left {
+    left: 0;
+}
+
+.carousel__button__right {
+    right: 0;
 }
