@@ -191,40 +191,81 @@ input {
 }
 
 
-/* carousel */
 
 
-.carousel-container {
+
+/*carousel*/
+
+/* Slideshow container */
+.slideshowContainer {
+    max-width: 450px;
     position: relative;
-    overflow: hidden;
+    margin: auto;
 }
 
-.carousel__track-container {
-    display: flex;
-    transition: transform 0.5s ease;
-}
 
-.carousel__slide {
-    flex: 0 0 33.33%;
-    /* Display three slides at a time */
-}
 
-.carousel__button__left,
-.carousel__button__right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
+/* Next & previous buttons */
+.prev,
+.next {
     cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    color: var(--primary-light-font-color);
+    transition: 0.5s linear;
 }
 
-.carousel__button__left {
+
+.next {
+    right: 0;
+}
+
+.prev {
     left: 0;
 }
 
-.carousel__button__right {
-    right: 0;
+
+.prev:hover,
+.next:hover {
+    background-color: var(--darker-primary-color)
+}
+
+/* rendered text */
+.text {
+    background-color: var(--background-color-card);
+    color: #000000;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+
+
+
+}
+
+text p:not(:last-child) {
+    text-decoration: underline;
+}
+
+/* Remove underline from the last <a> element within .text class */
+.text a:last-child {
+    text-decoration: none;
+}
+
+.text span {
+    padding: 1rem;
+    background-color: var(--background-color-card);
+}
+
+
+/* Fading animation */
+.slide {
+    animation-name: slide;
+    animation-duration: 1.5s;
+}
+
+.blogImage {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
 }
