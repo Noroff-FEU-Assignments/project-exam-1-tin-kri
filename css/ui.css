@@ -193,6 +193,23 @@ input {
 
 
 
+/*Index*/
+
+.landing-heading {
+    text-align: center;
+    padding: 4rem;
+}
+
+.latest-posts {
+    font-family: var(--font-family-base);
+    font-weight: var(--fw-base-bold);
+    color: var(--primary-dark-font-color);
+    text-align: center;
+
+
+    padding: 4rem;
+
+}
 
 /*carousel*/
 
@@ -239,15 +256,12 @@ input {
     position: absolute;
     width: 100%;
 
-
-
 }
 
 text p:not(:last-child) {
     text-decoration: underline;
 }
 
-/* Remove underline from the last <a> element within .text class */
 .text a:last-child {
     text-decoration: none;
 }
